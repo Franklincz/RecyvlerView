@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">RecyvlerView</string>
+    <string name="nom_entrenador">Ricardito Gareca</string>
+    <string name="descripcion">Entrenador </string>
+</resources>

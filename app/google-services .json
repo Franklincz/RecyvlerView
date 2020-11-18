@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "83904523041",
+    "firebase_url": "https://dam2019-f8bcc.firebaseio.com",
+    "project_id": "dam2019-f8bcc",
+    "storage_bucket": "dam2019-f8bcc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:83904523041:android:4b253b24b93499dd102c60",
+        "android_client_info": {
+          "package_name": "com.example.basicfirebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "83904523041-q0b3qe20qlh2120h0mje3p10tt68m8p1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAD9eovVqdgYO5EoTCYAGPXp9NmghyLa8M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "83904523041-q0b3qe20qlh2120h0mje3p10tt68m8p1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
