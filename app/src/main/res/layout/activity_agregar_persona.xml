@@ -17,13 +17,13 @@
         android:ems="10"
         android:hint="ingresa nombre"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toBottomOf="@+id/edtANio"
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/edtANio"
+        android:id="@+id/tttfecha"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="267dp"
@@ -35,7 +35,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/edtDescripcion"
+        android:id="@+id/tttmesa"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="350dp"
