@@ -6,6 +6,7 @@
 
     <string-array name="Estado">
         <item>Buscar por:</item>
+        <item>TODOS</item>
         <item>ACTIVO</item>
         <item>NO ACTIVO</item>
 

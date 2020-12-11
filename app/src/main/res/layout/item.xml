@@ -21,64 +21,85 @@
 
         <RelativeLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_height="150dp">
 
             <ImageView
                 android:id="@+id/imagen"
-                android:layout_width="100dp"
-                android:layout_height="150dp"
-                android:src="@drawable/ic_baseline_search_24"
-                android:scaleType="centerCrop" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="Nombres"
-                android:id="@+id/nombre"
-                android:layout_toRightOf="@+id/imagen"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
                 android:layout_alignParentTop="true"
-                android:layout_marginLeft="10dp" />
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginTop="30dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/employee" />
 
             <TextView
+                android:id="@+id/nombre"
+                android:layout_marginTop="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceSmall"
-                android:text="Small Text"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/imagen"
+                android:text="Nombres"
+                android:textSize="17dp"
+                android:textStyle="bold"
+                android:textAppearance="?android:attr/textAppearanceListItem" />
+
+            <TextView
                 android:id="@+id/apellidos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_below="@+id/nombre"
-                android:layout_alignLeft="@+id/nombre" />
+                android:layout_alignLeft="@+id/nombre"
+                android:textStyle="bold"
+                android:text="Small Text"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <TextView
+                android:id="@+id/estado"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/apellidos"
+                android:text="Estado"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:textStyle="bold"
+                android:layout_marginStart="85dp"
+                android:layout_marginLeft="85dp"
+                android:layout_marginTop="2dp"></TextView>
+
             <View
+                android:id="@+id/linea"
                 android:layout_width="wrap_content"
                 android:layout_height="1dp"
-                android:background="#ffd5d5d5"
-                android:id="@+id/linea"
-                android:layout_above="@+id/compartir"
-                android:layout_toRightOf="@+id/imagen">
+                android:layout_below="@+id/nombre"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="43dp"
+                android:layout_marginTop="64dp"
+                android:layout_marginBottom="2dp"
+                android:layout_toRightOf="@+id/imagen"
+                android:background="#ffd5d5d5">
 
             </View>
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/compartir"
-                android:layout_alignParentBottom="true"
-                android:layout_alignParentRight="true"
-                android:src="@android:drawable/ic_menu_share"
-                android:background="@color/material_blue_grey_800" />
 
             <TextView
                 android:id="@+id/id"
                 android:layout_width="wrap_content"
-                android:layout_height="0dp"
+                android:layout_height="wrap_content"
                 android:layout_below="@+id/apellidos"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentBottom="true"
-                android:layout_marginStart="17dp"
-                android:layout_marginLeft="17dp"
-                android:layout_marginTop="-30dp"
-                android:layout_marginBottom="99dp"
+                android:layout_marginStart="13dp"
+                android:layout_marginLeft="1dp"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="54dp"
+                android:textStyle="bold"
+                android:layout_marginBottom="26dp"
                 android:text="Nombres originals" />
 
         </RelativeLayout>

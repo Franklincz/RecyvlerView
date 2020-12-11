@@ -49,25 +49,19 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-        //referencio mi ImageButton
+        //referencio mis elementos
         imb=(ImageButton) findViewById(R.id.imgButton);
-
-
-        //referenciamos el edtbuscador
+        spiner1 = (Spinner) findViewById(R.id.spinner1);
         edtBuscar = (EditText) findViewById(R.id.edtBuscar);
-     //   empleadoAdapter = new EmpleadoAdapter(listaEmpleados);
-
-
-        // Obtener el Recycler
-        recycler = (RecyclerView) findViewById(R.id.reciclador);
+        recycler = (RecyclerView) findViewById(R.id.reciclador);// Obtener el Recycler
         recycler.setHasFixedSize(true);
-
+     //   empleadoAdapter = new EmpleadoAdapter(listaEmpleados);
 // Usar un administrador para LinearLayout
         lManager = new LinearLayoutManager(this);
         recycler.setLayoutManager(lManager);
 
-//obtener el spineer
-        spiner1 = (Spinner) findViewById(R.id.spinner1);
+
+
 
 //-----------
         //     svsearch = (SearchView) findViewById(R.id.svSheach);
@@ -83,6 +77,78 @@ public class MainActivity extends AppCompatActivity {
 // Crear un nuevo adaptador
            // adapter = new EmpleadoAdapter(listaEmpleados);
 
+
+
+
+
+
+
+
+
+        //aqui pobngo mi logicaaaaaa de
+        spiner1.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+
+
+            @Override
+            public void onItemSelected(AdapterView<?> lista, View view, int position, long id) {
+
+
+
+
+                if (lista.getItemAtPosition(position).equals("ACTIVO")) {
+
+                    obtenerEmpleadoActivo();
+
+                }
+                if (lista.getItemAtPosition(position).equals("NO ACTIVO")) {
+
+                    obtenerEmpleadoNoActivo();
+
+                }
+                else{
+                    obtenerEmpleados();
+                }
+
+
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
+
+        ///---------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
        empleadoAdapter = new EmpleadoAdapter(listaEmpleados);
 
         recycler.setAdapter(empleadoAdapter);
@@ -90,9 +156,14 @@ public class MainActivity extends AppCompatActivity {
 
         db2 = (DatabaseReference) FirebaseDatabase.getInstance().getReference().child(FirebaseReference.EMPLEADO_REFERENCE);
         obtenerEmpleados();
-
         FiltrarEmpleado();
-        filtrarEditTextEmpleado();
+
+// mi metodo obtener estaba aqui
+
+
+
+
+        filtrarEditTextEmpleado();//aqui estaba
         restablecerBusqueda(imb);
 
 
@@ -201,16 +272,9 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-  /*public void obtenerEmpleadoDesde(List<Empleado> listaEmpleados){
-        List<Empleado> listaaa= listaEmpleados;
-        int i=0;
-        for(i =0,i<listaaa.size(),i++){
 
 
-        }
- }
 
-   */
 
 
 
@@ -226,6 +290,10 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onItemSelected(AdapterView<?> lista, View view, int position, long id) {
+
+
+
+
                 if (lista.getItemAtPosition(position).equals("ACTIVO")) {
 
                     obtenerEmpleadoActivo();
@@ -233,8 +301,11 @@ public class MainActivity extends AppCompatActivity {
                 }
                 if (lista.getItemAtPosition(position).equals("NO ACTIVO")) {
 
-
                     obtenerEmpleadoNoActivo();
+
+                }
+                else{
+                    obtenerEmpleados();
                 }
 
 
@@ -288,13 +359,21 @@ public class MainActivity extends AppCompatActivity {
 
         for (Empleado emple : listaEmpleados) {
 
-            if (emple.getNombre().contains(text)) {
 
-                Log.i("ctm", "esto es un nombre " + emple.getNombre());
 
-                filterEmpleados.add(emple);
 
-            }
+    if (emple.getNombres().contains(text) ) {
+
+        //Log.i("ctm", "esto es un nombre " + emple.getNombres());
+
+        filterEmpleados.add(emple);
+
+
+
+}
+
+
+
 
 
         }

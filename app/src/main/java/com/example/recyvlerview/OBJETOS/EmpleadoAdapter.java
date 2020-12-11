@@ -1,6 +1,5 @@
 package com.example.recyvlerview.OBJETOS;
 
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,7 +10,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.recyvlerview.MODEL.Empleado;
 import com.example.recyvlerview.R;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class EmpleadoAdapter extends RecyclerView.Adapter<EmpleadoAdapter.EmpleadoViewHolder> {
@@ -36,9 +34,10 @@ public class EmpleadoAdapter extends RecyclerView.Adapter<EmpleadoAdapter.Emplea
     @Override
     public void onBindViewHolder(EmpleadoViewHolder viewHolder, int i) {
         //viewHolder);
-        viewHolder.nombre.setText(items.get(i).getNombre());
-        viewHolder.id.setText("IDENTIFICADOR:" + items.get(i).getId());
-        viewHolder.labor.setText("labor:"+ items.get(i).getLabor());
+        viewHolder.nombre.setText("Nombres:"+items.get(i).getNombres());
+        viewHolder.id.setText("DNI:" + items.get(i).getDni());
+        viewHolder.labor.setText("Labor:"+ items.get(i).getLabor());
+        viewHolder.estado.setText("Estado:"+items.get(i).getEstado());
     }
 
     public static class EmpleadoViewHolder extends RecyclerView.ViewHolder {
@@ -46,12 +45,14 @@ public class EmpleadoAdapter extends RecyclerView.Adapter<EmpleadoAdapter.Emplea
         public TextView id;
         public TextView nombre;
         public TextView labor;
+        public  TextView estado;
 
         public EmpleadoViewHolder(View v) {
             super(v);
             id= (TextView) v.findViewById(R.id.id);
             nombre = (TextView) v.findViewById(R.id.nombre);
             labor= (TextView) v.findViewById(R.id.apellidos);
+            estado= (TextView)v.findViewById(R.id.estado);
         }
     }
 

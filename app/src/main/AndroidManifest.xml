@@ -13,7 +13,11 @@
         <activity android:name=".MENU.Hacer_Pedido" />
         <activity android:name=".MENU.AgregarPersona" />
         <activity android:name=".recyclerActivity" />
-        <activity android:name=".MainActivity" />
+        <activity android:name=".MainActivity"
+            android:configChanges="screenSize|orientation"
+            android:windowSoftInputMode="stateHidden"
+
+            />
         <activity android:name=".MENU.MenuActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

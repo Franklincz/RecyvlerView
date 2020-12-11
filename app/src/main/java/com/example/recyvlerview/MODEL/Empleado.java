@@ -3,15 +3,16 @@ package com.example.recyvlerview.MODEL;
 
 public class Empleado {
 
-    private String id;
-    private String nombre;
+    private String dni;
+    private String nombres;
     private String apellidos;
     private String estado;
     private String labor;
 
-    public Empleado(String id, String nombre, String apellidos) {
-        this.id = id;
-        this.nombre = nombre;
+
+    public Empleado(String dni, String nombres, String apellidos) {
+        this.dni = dni;
+        this.nombres = nombres;
         this.apellidos = apellidos;
         this.estado = estado;
         this.labor = labor;
@@ -24,20 +25,20 @@ public class Empleado {
 
 
 
-    public String getId() {
-        return id;
+    public String getDni() {
+        return dni;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public void setDni(String dni) {
+        this.dni = dni;
     }
 
-    public String getNombre() {
-        return nombre;
+    public String getNombres() {
+        return nombres;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setNombres(String nombres) {
+        this.nombres = nombres;
     }
 
     public String getApellidos() {
